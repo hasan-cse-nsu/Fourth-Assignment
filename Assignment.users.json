@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "6763334ac7838f038ea78df1"
+  },
+  "firstName": "Rashidul",
+  "lastName": "Hasan",
+  "NIDNumber": "4152787158",
+  "phoneNumber": "01521437933",
+  "password": "654321",
+  "bloodGroup": "O+",
+  "createdAt": {
+    "$date": "2024-12-18T20:40:42.075Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-18T20:40:42.075Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67633419c7838f038ea78dfa"
+  },
+  "firstName": "Shishir Kumar",
+  "lastName": "Das",
+  "NIDNumber": "5786214539",
+  "phoneNumber": "01674588896",
+  "password": "7842196",
+  "bloodGroup": "B+",
+  "createdAt": {
+    "$date": "2024-12-18T20:44:09.537Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-18T20:44:09.537Z"
+  }
+}]

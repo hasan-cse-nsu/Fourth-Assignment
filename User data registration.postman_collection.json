@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "ce62be96-88a6-48ff-8055-02c8486e156e",
+		"name": "User data registration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38200380"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Shishir Kumar\",\r\n    \"lastName\" : \"Das\",\r\n    \"NIDNumber\" : \"5786214539\",\r\n    \"phoneNumber\" : \"01674588896\",\r\n    \"password\" : \"7842196\",\r\n    \"bloodGroup\" : \"B+\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASEURL}}/Registration",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"Registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNumber\" : \"01674588896\",\r\n    \"password\" : \"7842196\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASEURL}}/Login",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASEURL}}/ProfileDetails",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"ProfileDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Profile Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASEURL}}/AllProfileDetails",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"AllProfileDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Topu Ranjan\",\r\n    \"lastName\" : \"Majumder\",\r\n    \"NIDNumber\" : \"8965234158\",\r\n    \"phoneNumber\" : \"01674588895\",\r\n    \"password\" : \"4578216\",\r\n    \"bloodGroup\" : \"AB+\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASEURL}}/ProfileUpdate",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"ProfileUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile Delete",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASEURL}}/ProfileDelete/6763334ac7838f038ea78df1",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"ProfileDelete",
+						"6763334ac7838f038ea78df1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASEURL",
+			"value": "http://localhost:5050/api",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZU51bWJlciI6IjAxNjc0NTg4ODk2IiwidXNlcklkIjoiNjc2MzM0MTljNzgzOGYwMzhlYTc4ZGZhIiwiaWF0IjoxNzM0NTU0Njg5LCJleHAiOjE3MzcxNDY2ODl9.ZvCKTBLJ4GGvFrEHrDir-pJG5FLQW9SIxnhfhaQLxLo",
+			"type": "string"
+		}
+	]
+}
