@@ -80,9 +80,8 @@ export const ProfileUpdate = async (req, res) => {
 export const ProfileDelete = async (req, res) => {
 
     try {
-        let id = req.params.id;
-        // let userId = req.headers["userId"];
-        await UserModel.deleteOne({"_id" : id});
+        let userId = req.headers["userId"];
+        await UserModel.deleteOne({"_id" : userId});
         return res.json({status : "success", "Message" : "User deleted successfully."})
     } catch(err) {
         return res.json({status : "fail", "Message" : err.toString()})

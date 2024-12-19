@@ -10,7 +10,7 @@ router.post('/Login', UserController.Login);
 router.get('/ProfileDetails', authMiddleware, UserController.ProfileDetails);
 router.get('/AllProfileDetails', UserController.AllProfileDetails);
 router.post('/ProfileUpdate', authMiddleware, UserController.ProfileUpdate);
-router.get('/ProfileDelete/:id', authMiddleware, UserController.ProfileDelete);
+router.get('/ProfileDelete', authMiddleware, UserController.ProfileDelete);
 
 
 
